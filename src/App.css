@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+.cardPokemon {
+  background-color: lightgreen;
+  width: 15rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  filter: drop-shadow(10px 10px 10px grey )
+}
+
+.img-pokemon {
+  /* background-color: white; */
+  border-radius: 1rem;
+  filter: drop-shadow(6px 10px 5px rgb(2, 56, 2));
+}
+
+.name-pokemon {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  font-family: "Protest Riot", sans-serif;
+  font-style: normal;
+}
