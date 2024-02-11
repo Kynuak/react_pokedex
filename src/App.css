@@ -12,10 +12,16 @@
   filter: drop-shadow(10px 10px 10px grey )
 }
 
+.container-imgPokemon {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+}
+
 .img-pokemon {
-  /* background-color: white; */
   border-radius: 1rem;
   filter: drop-shadow(6px 10px 5px rgb(2, 56, 2));
+  width: 100%;
 }
 
 .name-pokemon {
