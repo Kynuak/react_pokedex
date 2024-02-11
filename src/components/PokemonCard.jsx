@@ -2,9 +2,16 @@ import propTypes from "prop-types"
 
 function PokemonCard( props ) {
     const { pokemon } = props
-    console.log(pokemon)
+
     return (
-    <figure className="cardPokemon">
+    <figure className={
+        `cardPokemon
+        ${ pokemon.type == 'Plante' ? 'color-back-plante' :
+        pokemon.type == 'Feu' ? 'color-back-feu' :
+        pokemon.type == 'Eau' ? 'color-back-eau' :
+        pokemon.type == 'Electrik' ? 'color-back-electrik' :
+        'color-back-inconnu'
+        }`}>
         <div className="container-imgPokemon">
         {pokemon.imgSrc === undefined ? 
             <p> ??? </p> 
@@ -24,7 +31,7 @@ function PokemonCard( props ) {
 PokemonCard.propTypes = {
     pokemon: propTypes.shape({
         name: propTypes.string.isRequired,
-        imgSrc: propTypes.string
+        imgSrc: propTypes.string,
     }).isRequired,
 }
 
