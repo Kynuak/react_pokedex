@@ -1,6 +1,6 @@
 import './App.css'
 import PokemonCard from './components/PokemonCard'
-import ButtonSwitchCard from './components/ButtonSwitchCard'
+import Navbar from './components/Navbar';
 import { useState }  from 'react'
 
 function App() {
@@ -47,11 +47,8 @@ function App() {
 
   return (
     <main>
-      <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
-      <div className='container-btn-switch'>
-        { pokemonIndex > 0 ? <ButtonSwitchCard textBtn="Précédent" change={handleClickPrécedent} pokemon={pokemonList[pokemonIndex]} />  : "" } 
-        { pokemonIndex < pokemonList.length - 1 ? <ButtonSwitchCard textBtn="Suivant" change={handleClickSuivant} pokemon={pokemonList[pokemonIndex]} />  : "" }
-      </div>
+      <PokemonCard pokemon={pokemonList[pokemonIndex] }/>
+      <Navbar tableIndex={ pokemonIndex } pokemon={ pokemonList } handleSuivant={handleClickSuivant} handlePrécedent={handleClickPrécedent} />
     </main>
   )
 
