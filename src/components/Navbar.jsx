@@ -1,25 +1,29 @@
-import ButtonSwitchCard from './ButtonSwitchCard'
+
 import propTypes from "prop-types"
 
 
-function Navbar({tableIndex, pokemon, handlePrécedent, handleSuivant}) {
+function Navbar({ pokemonList, setPokemonIndex }) {
     
+    const handleClick = (index) => {
+        setPokemonIndex(index)
+    }
+
+
+
     return (
-
-        <div className='container-btn-switch'>
-        { tableIndex > 0 ? <ButtonSwitchCard textBtn="Précédent" change={handlePrécedent} pokemon={pokemon[tableIndex]} />  : "" } 
-        { tableIndex < pokemon.length - 1 ? <ButtonSwitchCard textBtn="Suivant" change={handleSuivant} pokemon={pokemon[tableIndex]} />  : "" }
-        </div>
-
+        <ul className='container-btn-switch'>
+            {pokemonList.map((pokemon, index) => (
+                <li key={pokemon.name} >
+                    <button className="btn-switch" onClick={() => handleClick(index)}>{pokemon.name}</button>
+                </li>
+            ))}
+        </ul>
     )
 }
 
-
 Navbar.propTypes = {
-    tableIndex: propTypes.number.isRequired,
-    pokemon: propTypes.array.isRequired,
-    handlePrécedent: propTypes.func.isRequired,
-    handleSuivant: propTypes.func.isRequired
+    pokemonList: propTypes.array.isRequired,
+    setPokemonIndex: propTypes.func.isRequired
 }
 
 

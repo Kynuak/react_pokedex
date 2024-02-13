@@ -10,13 +10,25 @@ main {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  list-style: none;
 }
+
 
 .btn-switch {
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   width: 8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: rgb(44, 44, 44);
+  color: white;
+}
+
+.btn-switch:hover {
+  background-color: rgb(230, 230, 230);
+  color: black;
+  
 }
 
 .cardPokemon {
