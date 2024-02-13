@@ -17,9 +17,9 @@ return (
         pokemon.type == 'Electrik' ? 'color-back-electrik' :
         'color-back-inconnu'
         }`}
-         onClick={change}
+         onClick={ change }
     > 
-        {textBtn}
+        { textBtn }
     </button>
 )
 

@@ -31,6 +31,7 @@ main {
 
 .color-back-plante {
   background-color: rgb(144, 238, 144);
+
 }
 
 .color-back-feu {
@@ -62,7 +63,7 @@ main {
 
 .img-pokemon {
   border-radius: 1rem;
-  filter: drop-shadow(6px 10px 5px rgb(2, 56, 2));
+  filter: drop-shadow(6px 10px 5px rgb(65, 66, 65));
   width: 100%;
 }
 

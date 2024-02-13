@@ -18,7 +18,7 @@ function PokemonCard( props ) {
             : 
             <img 
             src={ pokemon.imgSrc }
-            alt={pokemon.name }
+            alt={ pokemon.name }
             className="img-pokemon"
             /> 
         }
@@ -32,6 +32,7 @@ PokemonCard.propTypes = {
     pokemon: propTypes.shape({
         name: propTypes.string.isRequired,
         imgSrc: propTypes.string,
+        type: propTypes.string
     }).isRequired,
 }
 
