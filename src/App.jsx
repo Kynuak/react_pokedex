@@ -1,9 +1,10 @@
 import './App.css'
 import PokemonCard from './components/PokemonCard'
 import Navbar from './components/Navbar';
-import { useState }  from 'react'
+import { useState }  from 'react';
+import { useEffect } from 'react';
 
-function App() {
+export default function App() {
   const pokemonList = [
     {
         name: "Bulbizarre",
@@ -36,6 +37,13 @@ function App() {
 
     const [pokemonIndex, setPokemonIndex] = useState(0);
 
+    useEffect(
+      () => {
+        alert("Hello pokemon trainer :)")
+      },
+      []
+    )
+
 
 
   return (
@@ -46,5 +54,3 @@ function App() {
   )
 
 }
-
-export default App
